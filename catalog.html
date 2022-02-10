@@ -112,7 +112,7 @@
           <option value="cheap">Сначала популярные</option>
           <option value="expensive">Сначала дорогие</option>
         </select>
-        <a class="button-lists" href="#">
+        <a class="button-lists-black" href="#">
           <span class="visually-hidden">Показать карточки</span>
         </a>
         <a class="button=lists" href="#">
@@ -141,7 +141,7 @@
               <h3 class="hotel-card-title">Desert Quail Inn</h3>
             </a>
             <span class="hotel-card-price">Гостиница  От 3000 ₽ </span>
-            <a class="hotel-card-link-details " href="#">подробнее</a>
+            <a class="hotel-card-link-details" href="#">подробнее</a>
             <a class="hotel-card-link-favourites" href="#">В избранное</a>
             <span class="visually-hidden">3 звезды</span>
             <p class="hotel-rating">Рейтинг: 8,9</p>
@@ -169,7 +169,7 @@
             <p class="hotel-rating">Рейтинг: 9,2 </p>
           </li>
         </ul>
-        <button class="button pagination-show-more" type="button">Загрузить ещё</button>
+        <button class="button-pagination-show-more" type="button">Загрузить ещё</button>
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>
@@ -187,12 +187,15 @@
             <a class="pagination-link" href="#">...</a>
           </li>
         </ul>
-        <select class="hotel-quantity" aria-label="количество гостиниц">
-          <option value="4">4</option>
-          <option value="3">3</option>
-          <option value="2">2</option>
-          <option value="1">1</option>
-        </select>
+        <article class="hotel-quantity">
+          <p>Гостиниц на странице:</p>
+          <select class="hotel-quantity-numbering" aria-label="количество гостиниц">
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
+        </article>
       </section>
       <section class="mailing-catalog">
         <h2 class="mailing-title">Подпишитесь на рассылку</h2>
@@ -200,7 +203,7 @@
         <form class="newsletter" action="https://echo.htmlacademy.ru/" method="post">
           <label for="newsletter-email">Email</label>
           <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
-          <button class="button">Подписаться</button>
+          <button class="mailing-button">Подписаться</button>
         </form>
       </section>
     </main>
