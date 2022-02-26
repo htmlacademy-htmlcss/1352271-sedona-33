@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="container-body">
-      <header class="main-header">
+      <header class="page-header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
             <img class="page-header-logo" alt="Логотип Седона»." src="images/header/logo-sedona.svg" width="139" height="70">
@@ -53,7 +53,7 @@
               </li>
             </ul>
           </header>
-          <h2 class="visually-hidden " hidden>Список гостиниц с фильтрами</h2>
+          <h2 class="visually-hidden ">Список гостиниц с фильтрами</h2>
           <form class="link-filter" action="https://echo.htmlacademy.ru" method="get">
             <fieldset class="link-filter-group">
               <legend class="link-filter-title">Инфраструктура:</legend>
@@ -106,17 +106,17 @@
           </form>
         </section>
         <section class="sorting">
-          <h2 class="visually-hidden" hidden>Сортировка Гостиниц</h2>
+          <h2 class="visually-hidden">Сортировка Гостиниц</h2>
           <p class="sorting-hotels">Найдено гостиниц: 38</p>
           <select class="sorting-control" aria-label="Сортировка">
             <option value="popular">Сначала дешёвые</option>
             <option value="cheap">Сначала популярные</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
-          <a class="button-lists-black" href="#">
+          <a class="button-lists button-black" href="#">
             <span class="visually-hidden">Показать карточки</span>
           </a>
-          <a class="button=lists" href="#">
+          <a class="button-lists" href="#">
             <span class="visually-hidden">Показать экран</span>
           </a>
           <a class="button-lists" href="#">
@@ -171,31 +171,33 @@
             </li>
           </ul>
           <button class="button-pagination-show-more" type="button">Загрузить ещё</button>
-          <ul class="pagination">
-            <li class="pagination-item">
-              <a class="pagination-link pagination-current">1</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">2</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">3</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">4</a>
-            </li>
-            <li class="pagination-item">
-              <a class="pagination-link" href="#">...</a>
-            </li>
-          </ul>
-          <div class="hotel-quantity">
-            <p>Гостиниц на странице:</p>
-            <select class="hotel-quantity-numbering" aria-label="количество гостиниц">
-              <option value="4">4</option>
-              <option value="3">3</option>
-              <option value="2">2</option>
-              <option value="1">1</option>
-            </select>
+          <div class="pagination-quantity">
+            <ul class="pagination">
+              <li class="pagination-item">
+                <a class="pagination-link pagination-current">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">...</a>
+              </li>
+            </ul>
+            <div class="hotel-quantity">
+              <p>Гостиниц на странице:</p>
+              <select class="hotel-quantity-numbering" aria-label="количество гостиниц">
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+              </select>
+            </div>
           </div>
         </section>
         <section class="mailing-catalog">
