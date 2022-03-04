@@ -97,6 +97,10 @@ body {
   min-height: 66px;
 }
 
+.navigation-item-search{
+  margin-left: 132px;
+}
+
 .navigation-link{
   display: block;
   padding: 20px 17px;
@@ -201,6 +205,8 @@ body {
   background-color: #83B3D3;
   color: #FFFFFF;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-city{
@@ -210,6 +216,7 @@ body {
   padding: 0;
   display: flex;
   list-style-type: none;
+  width: 100%;
 }
 
 .advantages-housing{
@@ -247,6 +254,7 @@ body {
   background-color: #83B3D3;
   color: #FFFFFF;
   width: 100%;
+  display: flex;
 }
 
 .advantages-item-three{
@@ -295,7 +303,7 @@ body {
   background-color: #756257;
   text-decoration: none;
   font-size: 20px;
-  line-height: 36px;
+  line-height: 60px;
   display: block;
   width: 575px;
   height: 60px;
@@ -344,12 +352,13 @@ body {
 }
 
 .newsletter {
+  display: flex;
+  align-items: stretch;
   padding-bottom: 94px;
+  justify-content: center;
 }
 
-.field {
-  height: 60px;
-}
+
 
 .mailing-button {
   height: 60px;
