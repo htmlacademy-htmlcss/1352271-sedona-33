@@ -545,10 +545,14 @@ body {
 }
 
 .hotel-card{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
   padding: 20px;
+  grid-template-areas:  "img img"
+                        "header header"
+                        "hotel value"
+                        "details favourites"
+                        "rating rating";
+  gap: 16px 26px;
 }
 
 .hotel-list .hotel-name-link{
@@ -557,11 +561,14 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 31px;
+  grid-area: header;
 }
 
 .hotel-card-title {
   font-size: 24px;
   font-weight: 700;
+  margin: 0;
+  padding: 0%;
 }
 
 .hotel-card-price{
@@ -569,6 +576,7 @@ body {
   line-height: 23px;
   color:#333333;
   width: 100%;
+  grid-area: hotel;
 }
 
 .hotel-card-price-value{
@@ -576,9 +584,11 @@ body {
   line-height: 23px;
   color:#333333;
   width: 100%;
+  grid-area: value;
 }
 
 .hotel-rating {
+  grid-area: rating;
   display: flex;
   align-items: center;
   background:#FFFFFF;
@@ -590,6 +600,10 @@ body {
   background:#FFFFFF;
 }
 
+.hotel-card-link {
+  grid-area: img;
+}
+
 .hotel-card-link-details{
   background: #756257;
   color: #FFFFFF;
@@ -598,6 +612,7 @@ body {
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
+  grid-area: details;
 }
 
 
@@ -609,6 +624,7 @@ body {
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
+  grid-area: favourites;
 }
 
 .hotel-rating-number{
