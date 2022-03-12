@@ -85,6 +85,7 @@ body {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .navigation-user {
@@ -98,7 +99,7 @@ body {
 }
 
 .navigation-item-search{
-  margin-left: 132px;
+  margin-left: 0;
 }
 
 .navigation-link{
@@ -109,6 +110,20 @@ body {
   color: #000000;
   background-color: #F2F2F2;
   text-decoration: none;
+}
+
+.navigation-link-icon{
+  padding: 0;
+}
+
+.user {
+  display: block;
+  color: #FFFFFF;
+  background-color: #756257;
+  width: 130px;
+  padding: 9px 15px;
+  border-radius: 4px;
+  margin-left: 20px;
 }
 /*-----------------main----------------*/
 .main-index {
@@ -309,6 +324,7 @@ body {
   height: 60px;
   margin: 0 auto;
   margin-bottom: 93px;
+  border-radius: 10px;
 }
 /*-----------------mailing----------------*/
 .mailing{
@@ -343,7 +359,13 @@ body {
   background: #83B3D3;
   font-weight: 700;
   text-transform: uppercase;
-  color: #FFFFFF
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 26px;
+  width: 200px;
+  border-radius: 0px 10px 10px 0px;
+  border: none;
+  cursor: pointer;
 }
 
 .mailing-catalog{
@@ -370,7 +392,7 @@ body {
 }
 
 .footer-social{
-  width: 107px;
+  width: 200px;
   margin-right: auto;
 }
 
@@ -382,10 +404,11 @@ body {
   flex-wrap: wrap;
   padding-top: 49px;
   padding-bottom: 53px;
+  margin-left: 72px;
 }
 
 .footer-social-item {
-  width: 21px;
+
   height: 16px;
   margin-right: 28px;
 }
@@ -462,8 +485,17 @@ body {
 
 .breadcrumbs-link{
   text-decoration: none;
-  margin-right: 26px;
+  margin-right: 10px;
 }
+
+.breadcrumbs-background {
+  padding-right: 17px;
+  background-repeat: no-repeat;
+  background-size: 6px 8px;
+  background-position: bottom 5px right 1px;
+  background-image: url(../images/breadcrumbs/nav-link-1.svg)
+}
+
 /*-----------------link-filter----------------*/
 .link-filter-title{
   font-weight: 700;
@@ -508,6 +540,17 @@ body {
 .button-lists{
   width: 48px;
   height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.button-black{
+  border: 2px solid #000000;
+  margin-left: 81px;
 }
 
 .sorting a{
@@ -592,12 +635,38 @@ body {
   display: flex;
   align-items: center;
   background:#FFFFFF;
+  margin-left: auto;
 }
 
 .hotel-rating-stars {
   width: 91px;
   margin-right: 49px;
   background:#FFFFFF;
+}
+
+.stars-four {
+  background-image: url(../images/stars/stars-4.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 17px;
+}
+
+.stars-three {
+  background-image: url(../images/stars/stars-3.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 17px;
+  width: 68px;
+  margin-right: 72px;
+}
+
+.stars-two {
+  background-image: url(../images/stars/stars-2.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 17px;
+  width: 43px;
+  margin-right: 97px;
 }
 
 .hotel-card-link {
@@ -613,6 +682,9 @@ body {
   text-align: center;
   text-transform: uppercase;
   grid-area: details;
+  text-decoration: none;
+  padding: 10px 0;
+  border-radius: 4px;
 }
 
 
@@ -625,6 +697,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   grid-area: favourites;
+  text-decoration: none;
+  padding: 10px 0;
+  border-radius: 4px;
+
 }
 
 .hotel-rating-number{
@@ -634,7 +710,11 @@ body {
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
+  width: 160px;
+  padding: 10px 0;
+  border-radius: 4px;
 }
+
 /*-----------------pagination----------------*/
 .pagination-quantity {
   display: flex;
@@ -660,6 +740,12 @@ body {
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
+  border-radius: 4px;
+  padding: 17px 0;
+  width: 620px;
+  border: none;
+  margin: 30px 218px;
+  cursor: pointer;
 }
 
 .pagination-link{
@@ -667,13 +753,14 @@ body {
   color: #FFFFFF;
   font-weight: 700;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 60px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   display: block;
   width: 55px;
   height: 55px;
+  border-radius: 4px;
 }
 
 .pagination-current{
