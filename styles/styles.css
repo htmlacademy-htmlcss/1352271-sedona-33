@@ -128,7 +128,6 @@ body {
 
 .navigation-link-icon{
   padding: 0;
-
 }
 
 .user {
@@ -568,7 +567,7 @@ body {
 }
 /*-----------------link-hotels----------------*/
 .link-hotels{
-  background-image: url("../images/background.jpg");
+  background-image: url("../images/catalog-background.jpg");
   background-size: 100% auto;
   margin: 0;
   padding: 0;
@@ -624,7 +623,7 @@ body {
 
 .catalog-filter-group {
   margin: 0;
-  margin-left: 71px;
+  margin-left: 70px;
   margin-bottom: 40px;
   padding: 0;
   border: none;
@@ -634,6 +633,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  padding: 0;
 }
 
 .link-filter{
@@ -644,6 +644,7 @@ body {
   margin-top: 30px;
   flex-direction: column;
   align-items: flex-start;
+  list-style-type: none;
 }
 
 .link-filter-item{
@@ -683,11 +684,27 @@ body {
 .control-input[type="checkbox"]:checked + .control-mark::after{
   position: absolute;
   content: "";
-  left: 3px;
-  top: 2px;
+  left: 4px;
+  top: 4px;
+  width: 15px;
+  height: 10px;
+  background-image: url(../images/vector.svg);
+  background-repeat: no-repeat;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
   width: 10px;
   height: 10px;
-  background-image: url(../images/Vector.svg);
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
 }
 
 .button-apply{
@@ -706,6 +723,18 @@ body {
   text-align: center;
 }
 
+.catalog-range-group{
+  margin: 0;
+  margin-left: 167px;
+  margin-bottom: 40px;
+  padding: 0;
+  border: none;
+}
+
+.range{
+  margin-top: 34px;
+}
+
 .range-scale{
   position: relative;
   margin-top: 30px;
@@ -717,7 +746,7 @@ body {
   position: absolute;
   height: 4px;
   background-color:#FFFFFF;
-  width: 277px;
+  width: 230px;
 }
 
 .range-toggle{
@@ -731,23 +760,23 @@ body {
 }
 
 .range-toggle:focus {
-  outline: 3px solid #83B3D3;
+  outline: 2px solid #83B3D3;
   border: none;
 }
 
 .range-toggle:active{
-  outline: 2px solid #83B3D3;
+  outline: 3px solid #83B3D3;
   border: none;
 }
 
 .toggle-min {
   top: -8px;
-  left: -10px;
+  left: 0px;
 }
 
 .toggle-max {
   top: -8px;
-  right: -10px;
+  right: -8px;
 }
 
 .range-wrapper-inputs {
@@ -761,12 +790,12 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  color:  rgba(255, 255, 255, 0.3);;
+  color:  rgba(255, 255, 255, 0.3);
 }
 
 .range-input {
-  width: 144px;
-  height: 48px;
+  width: 124px;
+  height: 43px;
   font: inherit;
   text-align:start;
   background-color: transparent;
@@ -776,6 +805,7 @@ body {
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
+  padding: 0;
   padding-left: 17px;
 
 }
@@ -788,23 +818,85 @@ body {
 .input-border-right{
   border-radius: 0 4px 4px 0;
   border: 2px solid #FFFFFF;
-  border-left: none;
+  margin-left: -2px;
+}
+
+.input-border-left:hover,
+.input-border-right:hover{
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.input-border-left:focus,
+.input-border-right:focus{
+  box-shadow: 0px 0px 0px 3px #81B3D2;
+  outline: none;
+}
+
+.input-border-left:active,
+.input-border-right:active{
+  background: #756257;
 }
 
 .label-left{
-  top: 15px;
-  left: 140px;
+  top: 14px;
+  left: 114px;
 }
 
 .label-right{
-  top: 15px;
-  right: 10px;
+  top: 14px;
+  right: 16px;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.butten-filters{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  margin-left: 81px;
+  margin-top: 22px;
+
+}
+
+.button-apply{
+  width: 160px;
+  height: 48px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+margin-bottom: 20px;
+
+}
+
+.button-cancel{
+  width: 160px;
+  height: 23px;
+  margin-bottom: 35px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #FFFFFF;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.button-apply:hover{
+  background: #68A2CA;
+}
+
+.button-apply:focus{
+  border: 3px solid #FFFFFF;
+}
+
+.button-apply:active{
+  color:  rgba(255, 255, 255, 0.3);
 }
 /*-----------------sorting----------------*/
 .sorting{
