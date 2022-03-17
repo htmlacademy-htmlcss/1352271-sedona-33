@@ -89,10 +89,21 @@ body {
   align-items: center;
 }
 
+.navigation-link-current::before{
+  position: absolute;
+  top: 65px;
+  left: 17px;
+  right: 17px;
+  height: 2px;
+  background-color:  #756257;
+  content: "";
+}
 
 .navigation-user {
-  width: 364px;
-  margin-left: 265px;
+  width: 380px;
+  margin-left: 260px;
+  margin-top: 5px;
+  justify-content: flex-end;
 }
 
 .navigation-user .navigation-list{
@@ -101,10 +112,11 @@ body {
 }
 
 .navigation-item-search{
-  margin-right: 10px;
+  margin-right: 22px;
 }
 
 .navigation-link{
+  position: relative;
   display: block;
   padding: 20px 17px;
   font-weight: 700;
@@ -131,9 +143,42 @@ body {
   padding-top: 9px;
   padding-bottom: 8px;
   border-radius: 4px;
-  margin-left: 15px;
+  margin-left: 5px;
   margin-bottom: 10px;
 }
+
+.like{
+  position: relative;
+  top: -5px;
+  right: 10px;
+}
+
+.like:active{
+  color: #FFFFFF;
+  opacity: 0.3;
+}
+
+
+.navigation-link .navigation-link-icon{
+  fill:#83B3D3;
+
+}
+
+.button-condition-brown:hover{
+  background: #615048;
+}
+
+.button-condition-brown:focus{
+  box-shadow:  0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.button-condition-brown:active{
+  background: #615048;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
 /*-----------------main----------------*/
 .main-index {
 
@@ -153,15 +198,23 @@ body {
 }
 
 .index-background{
-  background-image: url("../images/frame.svg"),
+  background-image:
                     url("../images/index-background.jpg");
   background-color: #83B3D3;
   background-repeat: no-repeat;
   background-position: bottom;
   margin-top: -10px;
+
 }
 
-
+.index-background::before{
+  background-image: url("../images/frame.svg");
+  position: absolute;
+  width: 1200px;
+  height: 57px;
+  top: 494px;
+  content: "";
+}
 
 .definition{
   font-weight: 700;
@@ -338,7 +391,7 @@ body {
   background-color: #756257;
   text-decoration: none;
   font-size: 20px;
-  line-height: 60px;
+  line-height: 65px;
   display: block;
   width: 575px;
   height: 60px;
@@ -380,12 +433,27 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: #FFFFFF;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 60px;
   width: 200px;
   border-radius: 0px 10px 10px 0px;
   border: none;
   cursor: pointer;
+  height: 60px;
+}
+
+.button-condition-blue:hover{
+  background-color: #68A2CA;
+}
+
+.button-condition-blue:focus{
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
+}
+
+.button-condition-blue:active{
+  background-color: #68A2CA;
+  color:  rgba(255, 255, 255, 0.3);
 }
 
 .mailing-catalog{
@@ -407,10 +475,27 @@ body {
 }
 
 
-
-.mailing-button {
-  height: 60px;
+.field{
+  width: 572px;
+  margin: 0;
+  border: 0;
+  padding: 8px 14px;
+  font: inherit;
+  font-weight: 400;
+  background-color: #F2F2F2;;
+  outline: none;
+  border-radius: 10px 0px 0px 10px;
 }
+
+.field:hover{
+  background: #E6E6E6;
+}
+
+.field:focus{
+  box-shadow:  0 0 0 3px #83B3D3;
+  outline: none;
+}
+
 /*-----------------footer----------------*/
 .footer-index{
   display: flex;
@@ -470,6 +555,8 @@ body {
   padding-left: 53px;
   padding-right: 72px;
 }
+
+
 /*-----------------main-catalog----------------*/
 .inner{
   color: #000000 ;
@@ -529,6 +616,20 @@ body {
 }
 
 /*-----------------link-filter----------------*/
+
+.catalog-filter{
+  display: flex;
+  margin-top: 45px;
+}
+
+.catalog-filter-group {
+  margin: 0;
+  margin-left: 71px;
+  margin-bottom: 40px;
+  padding: 0;
+  border: none;
+}
+
 .link-filter-title{
   font-weight: 700;
   font-size: 20px;
@@ -536,12 +637,58 @@ body {
 }
 
 .link-filter{
+  padding: 0;
   font-size: 18px;
   line-height: 23px;
   display: flex;
-  align-items: center;
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+.link-filter-item{
+  margin-bottom: 13px;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control:hover .control-mark{
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.control:focus .control-mark{
+  box-shadow:  0 0 0 3px #83B3D3;
+  outline: none;
+}
+
+.control:active .control-mark{
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after{
+  position: absolute;
+  content: "";
+  left: 3px;
+  top: 2px;
+  width: 10px;
+  height: 10px;
+  background-image: url(../images/Vector.svg);
+}
 
 .button-apply{
   background-color:#83B3D3;
@@ -557,6 +704,107 @@ body {
   font-size: 18px;
   line-height: 23px;
   text-align: center;
+}
+
+.range-scale{
+  position: relative;
+  margin-top: 30px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color:#FFFFFF;
+  width: 277px;
+}
+
+.range-toggle{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  cursor: pointer;
+  border: none;
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83B3D3;
+  border: none;
+}
+
+.range-toggle:active{
+  outline: 2px solid #83B3D3;
+  border: none;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.catalog-filter-label {
+  position: absolute;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color:  rgba(255, 255, 255, 0.3);;
+}
+
+.range-input {
+  width: 144px;
+  height: 48px;
+  font: inherit;
+  text-align:start;
+  background-color: transparent;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  padding-left: 17px;
+
+}
+
+.input-border-left{
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #FFFFFF;
+}
+
+.input-border-right{
+  border-radius: 0 4px 4px 0;
+  border: 2px solid #FFFFFF;
+  border-left: none;
+}
+
+.label-left{
+  top: 15px;
+  left: 140px;
+}
+
+.label-right{
+  top: 15px;
+  right: 10px;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 /*-----------------sorting----------------*/
 .sorting{
@@ -603,6 +851,7 @@ body {
   line-height: 23px;
   color: #333333;
 }
+
 /*-----------------hotel-sedona----------------*/
 .hotel-sedona{
   width: 1056px;
@@ -724,7 +973,7 @@ body {
 
 
 .hotel-card-link-favourites{
-  background: #7DB54F;
+  background: #83B3D3;
   color: #FFFFFF;
   font-weight: 700;
   font-size: 16px;
@@ -736,6 +985,23 @@ body {
   padding: 10px 0;
   border-radius: 4px;
 
+}
+
+.link-green{
+  background: #7DB54F;
+}
+
+.link-green:hover{
+  background: #6C9E42
+}
+
+.link-green:focus{
+  box-shadow: 0 0 0 3px #756257;
+  outline: none;
+}
+
+.link-green:active{
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-rating-number{
