@@ -42,7 +42,9 @@ body {
   font-size: 20px;
   line-height: 26px;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;;
+  width: 1280px;
+  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -60,6 +62,8 @@ body {
   width: 1200px;
   margin: 0 auto;
   flex-grow: 1;
+  box-shadow: 0 0 5px 4px #E5E5E5;
+
 }
 
 .page-header {
@@ -152,15 +156,25 @@ body {
   right: 10px;
 }
 
-.like:active{
-  color: #FFFFFF;
-  opacity: 0.3;
+.navigation-link:hover{
+  color: #756257;
 }
 
+.navigation-link:active{
+  color: rgba(117, 98, 87, 0.3);
+}
 
-.navigation-link .navigation-link-icon{
-  fill:#83B3D3;
+.like:active{
+  color: rgba(255, 255, 255, 0.3);
+}
 
+.navigation-link-icon:hover{
+  fill: #756257;
+}
+
+.navigation-link-icon:focus{
+  fill: #756257;
+  opacity: 0.3;
 }
 
 .button-condition-brown:hover{
@@ -458,7 +472,8 @@ body {
 .mailing-catalog{
   text-align: center;
   width: 1200px;
-  margin-bottom: 45px;
+  padding-bottom: 45px;
+  background-color: #FFFFFF;
 }
 
 .mailing-title-catalog{
@@ -499,6 +514,7 @@ body {
 .footer-index{
   display: flex;
   margin: 0 auto;
+  background-color: #FFFFFF;
 }
 
 .footer-social{
@@ -544,6 +560,25 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
+  margin-left: 85px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.footer-contacts-phone:hover{
+  color: #756257;
+}
+
+.footer-contacts-phone:focus{
+  outline: 3px solid #83B3D3;
+  color: #756257;
+  width: 361px;
+}
+
+.footer-contacts-phone:active{
+  color: #756257;
+  opacity: 0.3;
 }
 
 .htmlacademy{
@@ -555,6 +590,22 @@ body {
   padding-right: 72px;
 }
 
+.link{
+  fill: #83B3D3;
+}
+
+.link:hover{
+  fill: #68A2CA;
+}
+
+.link:focus{
+  outline: 3px solid #83B3D3;
+  border-radius: 6px;
+}
+
+.link:active{
+  fill: #b6d8ee;
+}
 
 /*-----------------main-catalog----------------*/
 .inner{
@@ -680,8 +731,7 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before,
-.control-input[type="checkbox"]:checked + .control-mark::after{
+.control-input[type="checkbox"]:checked + .control-mark::before{
   position: absolute;
   content: "";
   left: 4px;
@@ -858,7 +908,7 @@ body {
   flex-direction: column;
   justify-content:center;
   margin-left: 81px;
-  margin-top: 22px;
+  margin-top: 30px;
 
 }
 
@@ -868,18 +918,19 @@ body {
   border-radius: 4px;
   outline: none;
   border: none;
-margin-bottom: 20px;
+  margin-bottom: 19px;
 
 }
 
 .button-cancel{
-  width: 160px;
-  height: 23px;
+  width: 100px;
+  height: 32px;
+  margin-left: 25px;
   margin-bottom: 35px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 10px;
   text-align: center;
   color: #FFFFFF;
   outline: none;
@@ -898,6 +949,20 @@ margin-bottom: 20px;
 .button-apply:active{
   color:  rgba(255, 255, 255, 0.3);
 }
+
+.button-cancel:hover{
+  color:  rgba(255, 255, 255, 0.6);
+}
+
+.button-cancel:focus{
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-cancel:active{
+  color:  rgba(255, 255, 255, 0.3);
+}
+
 /*-----------------sorting----------------*/
 .sorting{
   width: 1056px;
@@ -918,11 +983,12 @@ margin-bottom: 20px;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
   margin-right: 8px;
+  box-sizing: border-box;
 }
 
-.button-black{
+.button-black {
   border: 2px solid #000000;
-  margin-left: 81px;
+  box-sizing: border-box;
 }
 
 .sorting a{
@@ -935,13 +1001,41 @@ margin-bottom: 20px;
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
-  padding-right: 192px;
+  margin-right: auto
+}
+
+.select {
+  position: relative;
+  width: 287px;
+  margin-right: 71px;
 }
 
 .sorting-control{
-  font-size: 18px;
+  font-size: 16px;
   line-height: 23px;
+  font-style: normal;
   color: #333333;
+  width: 100%;
+  height: 48px;
+  border: 2px solid #E6E6E6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 19px;
+  padding-right: 20px;
+  background-image: url(../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
+}
+
+.sorting-control:hover,
+.sorting-control:focus{
+  border-color: #83B3D3;
+  outline: none;
+}
+
+.sorting-control:active{
+ color:  #888484;
 }
 
 /*-----------------hotel-sedona----------------*/
@@ -1109,6 +1203,17 @@ margin-bottom: 20px;
   border-radius: 4px;
 }
 
+.hotel-card-link:hover{
+  opacity: 0.6;
+}
+
+.hotel-card-link:focus{
+  outline: 3px solid #83B3D3;
+}
+
+.hotel-card-link:active{
+  opacity: 0.3;
+}
 /*-----------------pagination----------------*/
 .pagination-quantity {
   display: flex;
@@ -1176,3 +1281,156 @@ margin-bottom: 20px;
   align-items: center;
 }
 
+.select-quantity{
+  position: relative;
+  padding-left: 51px;
+}
+
+.hotel-quantity-numbering{
+  width: 160px;
+  height: 48px;
+  border: 2px solid #E6E6E6;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-image: url(../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  appearance: none;
+  padding-left: 17px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.hotel-quantity-numbering:hover,
+.hotel-quantity-numbering:focus{
+  border-color: #83B3D3;
+  outline: none;
+}
+
+.hotel-quantity-numbering:active{
+ color:  #888484;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 0px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-auth{
+  width: 575px;
+  padding: 70px;
+  padding-top: 62px;
+}
+
+.modal-title{
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 55px;
+  right: 70px;
+  width: 53px;
+  height: 53px;
+  background-color: #F2F2F2;
+  border: none;
+  background-image: url("../images/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-close-button:hover{
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus{
+  border: 3px solid #83B3D3;
+}
+
+.modal-close-button:active{
+  background-color: #E6E6E6;
+  opacity: 0.3;
+}
+
+.modal-form{
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 50px;
+  padding-top: 56px;
+  text-align: center;
+}
+
+.arrival-date{
+  display: flex;
+
+}
+
+.arrival-contener{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+.arrival-description{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  color: #FF5757;
+}
+
+.arrival-date-title{
+  padding-right: 54px;
+  text-align: center;
+}
+
+.arrival-input{
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  width: 400px;
+  height: 50px;
+  background: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+  padding-left: 19px;
+  background-image: url(../images/calendar.svg);
+  background-position: right 18px center;
+  background-repeat: no-repeat;
+}
+
+.arrival-description{
+  margin-right: auto;
+  text-align: start;
+
+
+}
