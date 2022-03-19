@@ -510,6 +510,10 @@ body {
   outline: none;
 }
 
+.field:not(:placeholder-shown):invalid{
+  border: 2px solid #FF5757;
+  box-shadow:  0 0 0 0;
+}
 /*-----------------footer----------------*/
 .footer-index{
   display: flex;
@@ -991,6 +995,18 @@ body {
   box-sizing: border-box;
 }
 
+.button-lists:hover{
+  border: 2px solid #83B3D3;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.button-lists:focus{
+  border: 2px solid #83B3D3;
+  box-sizing: border-box;
+  outline: none;
+}
+
 .sorting a{
   color: #000000;
   text-decoration: none;
@@ -1074,6 +1090,10 @@ body {
   font-size: 24px;
   line-height: 31px;
   grid-area: header;
+}
+
+.hotel-card-image{
+  display: block;
 }
 
 .hotel-card-title {
@@ -1321,6 +1341,10 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal {
   position: relative;
   margin: auto;
@@ -1388,10 +1412,14 @@ body {
 
 .arrival-date{
   display: flex;
-
+  margin-bottom: 11px;
 }
 
-.arrival-contener{
+.exit-date{
+  display: flex;
+}
+
+.calendar-contener{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1399,19 +1427,21 @@ body {
 
 }
 
-.arrival-description{
+.calendar-description{
   font-weight: 400;
   font-size: 16px;
   line-height: 40px;
-  color: #FF5757;
+  color: #333333;
+
 }
 
-.arrival-date-title{
-  padding-right: 54px;
+.calendar-date-title{
+  width: 110px;
+  padding-right: 44px;
   text-align: center;
 }
 
-.arrival-input{
+.calendar-input{
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 700;
@@ -1428,9 +1458,174 @@ body {
   background-repeat: no-repeat;
 }
 
-.arrival-description{
+.calendar-description{
   margin-right: auto;
   text-align: start;
+  line-height: 30px;
+}
+
+.red-color{
+  color: #FF5757;;
+}
+
+.calendar-input:hover{
+  background-color: #E6E6E6;
+}
+
+.calendar-input:focus{
+  outline: 3px solid #83B3D3;
+  background-color: #E6E6E6;
+}
+
+.calendar-input:active{
+  background-color: #E6E6E6;
+}
+
+.quantity-people{
+  display: flex;
+  margin-top: 10px;
+}
+
+.quantity-adults-title{
+  padding-right: 70px;;
+}
+
+.quantity-input{
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  width: 135px;
+  height: 45px;
+  background: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+}
+
+.quantity-adults{
+  display: flex;
+}
+
+.quantity-children{
+  display: flex;
+  padding-left: 56px;
+}
+
+.quantity-children-contener{
+  display: flex;
+  position: relative;
+}
 
 
+.tooltip-toggle{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #83B3D3;
+  border: none;
+  background-image: url(../images/info.svg);
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  margin-left: 5px;
+  margin-top: 13px;
+  margin-right: 15px;
+}
+
+.tooltip-text {
+  display: none;
+  background-color: #333333;
+  color: #ffffff;
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+  text-align: start;
+  padding: 20px 18px 25px 22px;
+  border-radius: 10px;
+  width: 216px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50px;
+  right: 35px;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-toggle:hover{
+  background-color: #68A2CA;;
+}
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/corner.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-find{
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  height: 60px;
+  background-color:  #83B3D3;
+  border-radius: 10px;
+  color: #FFFFFF;
+  text-align: center;
+  border: none;
+  margin-top: 40px;
+}
+
+.button-contener{
+  position: relative;
+}
+
+.button-minus{
+  position: absolute;
+  border: none;
+  top: 11px;
+  left: 16px;
+  opacity: 0.3;
+}
+
+.button-plus{
+  position: absolute;
+  border: none;
+  right: 15px;
+  top: 15px;
+  opacity: 0.3;
+}
+
+.button-minus:hover,
+.button-plus:hover{
+  opacity: 0.9;
+}
+
+.button-minus:focus,
+.button-plus:focus{
+  opacity: 0.9;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-minus:active,
+.button-plus:active{
+  opacity: 0.3;
 }
